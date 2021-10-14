@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Document</title>
+    <link rel="stylesheet" href="glaphorism.css">
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;">
+                <button class="start">Start</button>
+            </div>
+            <div class="square" style="--i:2;">
+            </div>
+            <div class="square" style="--i:3;">
+                <span class="countdown">
+                    10
+                    <span class="numbers">
+                        <span>10</span><br>
+                        <span>9</span><br>
+                        <span>8</span><br>
+                        <span>7</span><br>
+                        <span>6</span><br>
+                        <span>5</span><br>
+                        <span>4</span><br>
+                        <span>3</span><br>
+                        <span>2</span><br>
+                        <span>1</span><br>
+                        <span>0</span><br>
+                    </span>
+                </span>
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+            </div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;">
+                <button class="reset">Reset</button>
+            </div>
+            <div class="container">
+                <div class="form">
+                    <h2>Login Form</h2>
+                    <form>
+                        <div class="inputbox">
+                            <input type="text" placeholder="Username (example: ABCDE-12345)" id="felhasznalonev" pattern=".{5}-\d{5}" required>
+                        </div>
+                        <div class="inputbox">
+                            <input type="password" id=firstPassword placeholder="Password" pattern="^[A-Za-z]\w{7,14}$" required>
+                        </div>
+                        <div class="inputbox">
+                            <input type="password" id=secondPassword placeholder="Password Again" pattern="^[A-Za-z]\w{7,14}$" required>
+                        </div>
+                        <div class="inputbox">
+                            <input type="email" placeholder="E-mail Address" id="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[hu]{2}$" required>
+                        </div>
+                        
+                        <div class="radio">
+                            <input label="Sárga" type="radio" id="szin1" name="szin" value="yellow" checked>
+                            <input label="Piros" type="radio" id="szin2" name="szin" value="red">
+                            <input label="Kék" type="radio" id="szin3" name="szin" value="blue">
+                            <input label="Zöld" type="radio" id="szin4" name="szin" value="green">
+                        </div>
+
+                        <div class="inputbox">
+                            
+                        </div>
+                        
+                        <div class="inputbox">
+                            <input type="submit" value="Login" id="login">
+                            <span id="spanUzenet"></span>
+                        </div>
+
+                        <p class="forget">Forget password? <a href="#"> Click here! </a></p>
+                        <p class="forget">Dont have an account? <a href="#"> Sign up </a></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+<script src="glaphorism.js"></script>
+</html>

@@ -1,0 +1,290 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+section .color{
+    position: absolute;   
+    filter: blur(150px);
+}
+
+section .color:nth-child(1){
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #5a0a04;
+}
+
+section .color:nth-child(2){
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #95a004;
+}
+
+section .color:nth-child(3){
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #6a4ece;
+}
+.box{
+    position: relative;
+}
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(63, 0, 0, 0.726);
+    border-right: 1px solid rgba(195, 209, 4, 0.11);
+    border-bottom: 1px solid rgba(160, 204, 3, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.137);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * let(--i));
+}
+@keyframes animate {
+    0%,100%
+    {
+        transform: translateY(-40px);
+    }
+    50%
+    {
+        transform: translateY(40px);
+    }
+}
+
+
+.box .square:nth-child(1){
+top: 50px;
+right: -60px;
+width: 100px;
+height: 100px;
+}
+
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+    
+.box .square:nth-child(4){
+    bottom: 180px;
+    right: -170px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+.box .square:nth-child(6){
+    top: 80px;
+    left: -240px;
+    width: 150px;
+    height: 150px;
+}
+
+
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(63, 0, 0, 0.726);
+    border-right: 1px solid rgba(195, 209, 4, 0.11);
+    border-bottom: 1px solid rgba(160, 204, 3, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.137);
+}
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color:#ffff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.form h2::before{
+    content: " ";
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    width: 80px;
+    height:  4px;
+    background: seashell;
+}
+
+.form .inputbox{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputbox input{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-right: 1px solid rgba(195, 209, 4, 0.11);
+    border-bottom: 1px solid rgba(160, 204, 3, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.137);
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: seashell;
+    box-shadow: 0 5px 15px rgba(63, 0, 0, 0.726);
+}
+.form .inputbox input::placeholder
+{
+    color:seashell;
+}
+.form .inputbox input[type="submit"]{
+    
+    color: #0a0a0a;
+    background: #f1f4f9;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+.form .radio {
+
+	margin-top: 20px;
+	position: relative;
+}
+
+.form .radio input {
+	width: auto;
+	height: 100%;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	padding: 4px 8px;
+	font-size: 14px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	transition: all 100ms linear;
+}
+
+.form .radio input:checked {
+	background-image: linear-gradient(180deg, #95d891, #74bbad);
+	color: #fff;
+}
+
+.form .radio input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.forget a{
+    color: rgb(0, 0, 0);
+    font-weight: 550;
+}
+
+button{
+    background: #f1f4f91a;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    line-height: 1;
+    transition: 03s ease all;
+    display: flex;
+    
+}
+
+button:hover{
+    transform: scale(1.05);
+    background: #fefefe;
+    transition: 01s ease all;
+}
+
+.countdown{
+    position: relative;
+    display: block;
+    text-indent: 999px;
+    overflow: hidden;
+    top: 40px;
+    left: 40px;
+    
+}
+
+.numbers{
+    position: absolute;
+    top: 19;
+    left: 0;
+    text-align: center;
+    transition: 0.3s ease transform;
+    transform: translateY(-19px);
+    text-indent: 0;
+}
+.start{
+    position: relative;
+    top:40px;
+    left:30px;
+}
+.reset{
+    position: relative;
+    top:60px;
+    left:45px;
+}
+
+#myProgress {
+    
+    width: 100%;
+    background-color: #ddd;
+    
+}
+
+#myBar {
+    
+    width: 1%;
+    height: 10px;
+    background-color: #04AA6D;
+    
+}
